@@ -42,7 +42,8 @@ For($i = 1; $i -le $numInstances; $i++){
         Set-AzureRmCurrentStorageAccount -ResourceGroupName $resourceGroupInstanceName -Name $storageAccountName
         New-AzureStorageContainer -Name $destContainerName -Permission Off
         $storageKey = (Get-AzureRmStorageAccountKey -Name $storageAccountName -ResourceGroupName $resourceGroupInstanceName).Value[0]
-        $sourceSAS = "'?sv=2017-04-17&ss=b&srt=co&sp=rl&se=2019-12-31T18:29:33Z&st=2017-09-18T10:29:33Z&spr=https&sig=bw1EJflDFx9NuvLRdBGql8RU%2FC9oz92Dz8Xs76cftJM%3D'"
+        #$sourceSAS = "'?sv=2017-04-17&ss=b&srt=co&sp=rl&se=2019-12-31T18:29:33Z&st=2017-09-18T10:29:33Z&spr=https&sig=bw1EJflDFx9NuvLRdBGql8RU%2FC9oz92Dz8Xs76cftJM%3D'"
+        $sourceSAS = "'?sv=2019-12-12&ss=b&srt=co&sp=rl&se=2025-08-25T23:33:47Z&st=2020-08-25T15:33:47Z&spr=https&sig=AaNv%2ByYkBWmIJHFitLlMSfbPBhYqmyokUO5MEwIC6bY%3D'"
         az storage blob copy start-batch --source-account-name retaildatasamples --source-container data   --account-name $storageAccountName --account-key $storageKey --destination-container $destContainerName --pattern retaildata/rawdata* --source-sas ${sourceSAS}
 
     } -ArgumentList $params  
