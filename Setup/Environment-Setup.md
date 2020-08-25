@@ -74,7 +74,7 @@ The retaildata source files are currently available at the following location, a
 
 **path**: retaildata  
 
-**SAS Key**: ?sv=2017-04-17&ss=b&srt=co&sp=rl&se=2019-12-31T18:29:33Z&st=2017-09-18T10:29:33Z&spr=https&sig=bw1EJflDFx9NuvLRdBGql8RU%2FC9oz92Dz8Xs76cftJM%3D
+**SAS Key**: ?sv=2019-12-12&ss=b&srt=co&sp=rl&se=2025-08-25T23:33:47Z&st=2020-08-25T15:33:47Z&spr=https&sig=AaNv%2ByYkBWmIJHFitLlMSfbPBhYqmyokUO5MEwIC6bY%3D
 
 Verify the copy has completed by navigating to the destination container using the Azure Portal. In the container list, select the ellipses and then Container properties. If your ouput matches the following, all of the files have been copied over:
 
